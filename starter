@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# payconnect:
-# bash ~/gosuslugi/starter -e ~/gosuslugi/payconnect -t 5 -l /tmp/payconnect
-
+# This script starts a number of other scripts (26 by default).
+# To start eternal nalog.ru recovery requests cycle, run like this:
+# bash ~/starter -e ~/nalog-recovery -t 2 -l ~/nalog.log
 
 while getopts f:t:p:l:e:s: flag
 do
