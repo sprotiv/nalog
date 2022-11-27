@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# payconnect:
+# bash ~/gosuslugi/starter -e ~/gosuslugi/payconnect -t 5 -l /tmp/payconnect
+
+
+while getopts f:t:p:l:e:s: flag
+do
+    case "${flag}" in
+        t) pMaxtime=${OPTARG};;
+        l) pLog=${OPTARG};;
+        e) pExec=${OPTARG};;
+    esac
+done
+
+
+maxtime="$pMaxtime"
+export maxtime
+
+for x in {a..z}
+do
+
+
+log="$pLog.log"
+export log
+
+
+#echo "$maxtime"
+#echo "$filename"
+#echo "$proxylist"
+#echo "$log"
+
+
+exec "$pExec" &
+
+sleep 0.5
+
+done
