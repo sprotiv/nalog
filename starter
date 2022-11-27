@@ -2,7 +2,7 @@
 
 # This script starts a number of other scripts (26 by default).
 # To start eternal nalog.ru recovery requests cycle, run like this:
-# bash ~/starter -e ~/nalog-recovery -t 2 -l ~/nalog.log
+# bash ./starter -e ./nalog-recover -t 2 -l ./nalog.log
 
 while getopts f:t:p:l:e:s: flag
 do
